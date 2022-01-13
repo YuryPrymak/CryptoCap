@@ -1,0 +1,131 @@
+.header {
+  .sticky-header {
+    background-color: var(--main-bg-color);
+    box-shadow: 0 0 7px 3px rgba(100, 100, 100, .3);
+  };
+
+  // Top Bar
+  &__top-bar {
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid transparent;
+    transition: background-color .2s linear, box-shadow .2s linear;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: 20px;
+    color: var(--text-color-main);
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    @include media-lg {
+      margin-right: auto;
+    }
+
+    @include media-xs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      color: var(--brand-color);
+    }
+  }
+
+  &__nav  {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 999;
+
+    @include media-lg {
+      width: 70vw;
+      height: 100vh;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: -70vw;
+      padding: 100px 20px;
+      background-color: rgba(100, 100, 100, .1);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 7px 3px rgba(100, 100, 100, .1);
+      overflow: auto;
+      visibility: hidden;
+      transition: transform .3s ease-in-out, visibility 0s .3s;
+    }
+  }
+
+  .active {
+    @include media-lg {
+      visibility: visible;
+      transform: translateX(-90%);
+      transition: transform .3s ease-in-out, visibility 0s 0s;
+    }
+  }
+
+  &__lang {
+    margin-left: 20px;
+
+    @include media-xs {
+      margin-left: 15px;
+    }
+  }
+
+  &__btn-login {
+    margin-left: 20px;
+
+    @include media-xs {
+      margin-left: 15px;
+    }
+  }
+
+  &__btn-nav-toggle {
+    display: none;
+    flex-shrink: 0;
+    z-index: 9999;
+
+    @include media-lg {
+      display: block;
+      margin-left: 20px;
+    }
+
+    @include media-xs {
+      margin-left: 15px;
+    }
+  }
+
+  // Content
+  &__content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: calc(100px + var(--header-height)) 0 135px 0;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 530px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: var(--text-color-2);
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+  }
+
+  &__btn-get-started {
+    margin: 0 auto;
+  }
+}

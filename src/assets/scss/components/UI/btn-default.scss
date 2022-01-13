@@ -1,0 +1,20 @@
+.btn-default {
+  display: block;
+  padding: 12px 30px;
+  border-radius: 10px;
+  color: var(--text-color-main);
+  background-color: var(--brand-color);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+
+  &:hover {
+    background-color: var(--brand-color-hover);
+  }
+
+  &_xs-small {
+    @include media-xs {
+      padding: 8px 15px;
+    }
+  }
+}

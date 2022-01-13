@@ -1,0 +1,24 @@
+.lang-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    color: var(--text-color-main);
+    font-weight: 500;
+
+    &:hover {
+      color: var(--brand-color);
+    }
+
+    &_active {
+      color: var(--brand-color);
+    }
+  }
+}

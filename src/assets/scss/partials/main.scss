@@ -13,6 +13,10 @@
 
 body {
   min-width: 320px;
+  color: var(--text-color-main);
+  background-color: var(--main-bg-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
 }
 
 ul {
@@ -26,6 +30,48 @@ a {
 button {
   border: none;
   cursor: pointer;
+}
+
+// Layout
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url('../img/bg-1.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+
+  &__header {
+
+  }
+
+  &__main {
+    flex-grow: 1;
+  }
+
+  &__footer {
+
+  }
+}
+
+.wrapper {
+  width: 100%;
+  max-width: calc(var(--page-max-width) + (var(--side-padding) * 2));
+  margin: 0 auto;
+  padding-right: var(--side-padding);
+  padding-left: var(--side-padding);
+
+  @include media-lg {
+    padding-right: var(--side-padding-lg);
+    padding-left: var(--side-padding-lg);
+  }
+
+  @include media-sm {
+    padding-right: var(--side-padding-sm);
+    padding-left: var(--side-padding-sm);
+  }
 }
 
 // Font
