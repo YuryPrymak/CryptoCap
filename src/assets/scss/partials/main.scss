@@ -49,6 +49,7 @@ button {
 
   &__main {
     flex-grow: 1;
+    overflow: hidden;
   }
 
   &__footer {

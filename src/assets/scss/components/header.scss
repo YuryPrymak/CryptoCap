@@ -116,12 +116,14 @@
 
   &__text {
     width: 100%;
-    max-width: 530px;
+    max-width: 500px;
     margin: 0 auto;
     margin-bottom: 50px;
     color: var(--text-color-2);
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     line-height: 160%;
+
     text-align: center;
   }
 

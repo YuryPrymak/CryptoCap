@@ -1,0 +1,33 @@
+.trends-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -24px;
+
+  @include media-lg {
+    margin: -12px;
+  }
+
+  @include media-sm {
+    margin: 0;
+  }
+
+  &__trend-card {
+    width: calc(100% / 12 * 3 - 48px);
+    margin: 24px;
+
+    @include media-xl {
+      width: calc(100% / 12 * 4 - 48px);
+    }
+
+    @include media-lg {
+      width: calc(100% / 12 * 6 - 24px);
+      margin: 12px;
+    }
+
+    @include media-sm {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
