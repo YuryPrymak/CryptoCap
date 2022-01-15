@@ -38,10 +38,10 @@ button {
   display: flex;
   flex-direction: column;
 
-  background-image: url('../img/bg-1.png');
+  background-image: url('../img/bg-1.png'), url('../img/bg-2.png'), url('../img/bg-3.png');
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  background-position: top center;
+  background-position: top center, center center, bottom 10% center;
 
   &__header {
 

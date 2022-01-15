@@ -1,27 +1,23 @@
-.trends-list {
+.card-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px;
-
-  @include media-lg {
-    margin: -12px;
-  }
+  justify-content: center;
+  margin: -12px;
 
   @include media-sm {
     margin: 0;
   }
 
-  &__trend-card {
-    width: calc(100% / 12 * 3 - 48px);
-    margin: 24px;
+  &__card-default {
+    width: calc(100% / 12 * 3 - 24px);
+    margin: 12px;
 
     @include media-xl {
-      width: calc(100% / 12 * 4 - 48px);
+      width: calc(100% / 12 * 4 - 24px);
     }
 
     @include media-lg {
       width: calc(100% / 12 * 6 - 24px);
-      margin: 12px;
     }
 
     @include media-sm {

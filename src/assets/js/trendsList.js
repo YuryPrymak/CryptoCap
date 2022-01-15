@@ -1,7 +1,7 @@
 import ApexCharts from 'apexcharts';
 
 export default (() => {
-  const trendsList = document.querySelector('.trends-list');
+  const trendsList = document.querySelector('[data-trends-list]');
   const data = [
     {
       id: 33505384,
@@ -103,7 +103,7 @@ export default (() => {
   };
 
   const getTrendCard = trendCard => `
-    <li class="trends-list__trend-card trend-card">
+    <li class="card-list__card-default trend-card">
       <div class="trend-card__header">
         <div class="trend-card__icon">
           <img src="./assets/img/cryptocurrencies/${trendCard.icon}" alt="${trendCard.title}">
