@@ -1,0 +1,44 @@
+.articles-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px -12px;
+
+  @include media-sm {
+    margin: -10px 0;
+  }
+
+  &__article {
+    width: calc(25% - 24px);
+    margin: 20px 12px;
+
+    @include media-xl {
+      width: calc(100% / 12 * 4 - 24px);
+    }
+
+    @include media-lg {
+      width: calc(50% - 24px);
+    }
+
+    @include media-sm {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    &_large {
+      width: calc(50% - 24px);
+
+      @include media-xl {
+        width: calc(100% / 12 * 8 - 24px);
+      }
+
+      @include media-lg {
+        width: calc(100% - 24px);
+        min-height: 250px;
+      }
+
+      @include media-sm {
+        width: 100%;
+      }
+    }
+  }
+}
