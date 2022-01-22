@@ -1,0 +1,9 @@
+.link-default {
+  color: var(--brand-color);
+  font-weight: 600;
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--brand-color-hover);
+  }
+}

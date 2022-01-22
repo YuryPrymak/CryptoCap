@@ -1,0 +1,55 @@
+.table-coins {
+  td {
+    white-space: nowrap;
+
+    &:last-child {
+      width: 0;
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 44px;
+      height: 44px;
+      margin-right: 20px;
+    }
+
+    span {
+      &:first-of-type {
+        position: relative;
+        margin-right: 35px;
+
+        &::after {
+          content: '';
+          width: 1px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: -20px;
+          background-color: #403A3A;
+        }
+      }
+    }
+  }
+
+  &__chart {
+    width: 150px;
+  }
+
+  &__link {
+    padding: 5px 24px;
+    border-radius: 10px;
+    color: var(--text-color-main);
+    background-color: var(--brand-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+
+    &:hover {
+      background-color: var(--brand-color-hover);
+    }
+  }
+}

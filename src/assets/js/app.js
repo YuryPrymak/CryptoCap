@@ -5,3 +5,4 @@ import 'focus-visible';
 import './nav.js';
 import './dropdown.js';
 import './trendsList.js';
+import './coinsStats.js';

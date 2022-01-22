@@ -1,0 +1,60 @@
+.coins-stats {
+  margin-bottom: 140px;
+
+  &__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include media-lg {
+      flex-direction: column;
+    }
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: -6px;
+
+    @include media-lg {
+      justify-content: center;
+    }
+  }
+
+  &__category {
+    margin: 6px;
+  }
+
+  &__btn-category {
+
+  }
+
+  &__search {
+    width: 280px;
+    flex-shrink: 0;
+    margin-left: 20px;
+
+    @include media-lg {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    @include media-sm {
+      width: 100%;
+    }
+  }
+
+  &__table {
+    margin-bottom: 30px;
+  }
+
+  &__label-not-found {
+    display: none;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    color: var(--text-color-2);
+    text-align: center;
+  }
+}

@@ -1,108 +1,31 @@
 import ApexCharts from 'apexcharts';
 
+import chartConfig from './chart/chartConfig.js';
+import { cryptocurrencyData } from './data/cryptocurrency.js';
+
 export default (() => {
   const trendsList = document.querySelector('[data-trends-list]');
-  const data = [
-    {
-      id: 33505384,
-      icon: 'btc.png',
-      title: 'BTC',
-      label: 'BITCOIN',
-      link: '#',
-      price: '56,623.54',
-      percent: '+1.41',
-      data: [30943, 53950, 60573, 45696, 47582, 56623]
-    },
-    {
-      id: 35605384,
-      icon: 'eth.png',
-      title: 'ETH',
-      label: 'ETHEREUM',
-      link: '#',
-      price: '4,267.90',
-      percent: '+2.22',
-      data: [10943, 5390, 3449, 7058, 2355, 4267]
-    },
-    {
-      id: 33563384,
-      icon: 'bnb.png',
-      title: 'BNB',
-      label: 'BINANCE',
-      link: '#',
-      price: '587.74',
-      percent: '-0.82',
-      data: [109, 539, 344, 705, 235, 587]
-    },
-    {
-      id: 33526384,
-      icon: 'usdt.png',
-      title: 'USDT',
-      label: 'TETHER',
-      link: '#',
-      price: '356.98',
-      percent: '+0,03',
-      data: [367, 752, 267, 624, 356, 456]
-    }
-  ];
-  const chartOptions = {
-    chart: {
-      type: 'area',
-      height: 100,
-      parentHeightOffset: 0,
-      toolbar: {
-        show: false
-      },
-      zoom: {
-        enabled: false
-      }
-    },
-    colors: ['#0FAE96'],
-    dataLabels: {
-      enabled: false
-    },
-    grid: {
-      show: false,
-      padding: {
-        top: -20,
-        right: 0,
-        bottom: -20,
-        left: -10
-      }
-    },
-    tooltip: {
-      enabled: false
-    },
-    xaxis: {
-      labels: {
-        show: false
-      },
-      axisBorder: {
-        show: false
-      },
-      axisTicks: {
-        show: false
-      },
-      tooltip: {
-        enabled: false
-      },
-    },
-    yaxis: {
-      labels: {
-        show: false
-      },
-      axisBorder: {
-        show: false
-      },
-      axisTicks: {
-        show: false
-      },
-      tooltip: {
-        enabled: false
-      },
-    }
+
+  if(!trendsList) return;
+
+  const popularCryptocurrencies = cryptocurrencyData.filter(cryptocurrency => {
+    let isPopular = false;
+
+    cryptocurrency.categories.forEach(category => {
+      if(category === 'Popular') isPopular = true;
+    });
+
+    return isPopular ? cryptocurrency : false;
+  });
+
+  const currentChartConfig = {
+    ...chartConfig
   };
 
-  const getTrendCard = trendCard => `
+  currentChartConfig.chart.height = 100;
+  currentChartConfig.colors = ['#0FAE96'];
+
+  const getTrendCardTemplate = trendCard => `
     <li class="card-list__card-default trend-card">
       <div class="trend-card__header">
         <div class="trend-card__icon">
@@ -123,21 +46,25 @@ export default (() => {
           <p class="trend-card__price">$${trendCard.price}</p>
           <p class="trend-card__percent">${trendCard.percent}%</p>
         </div>
-        <div class="trend-card__chart" data-chart-id="${trendCard.id}"></div>
+        <div class="trend-card__chart" data-trends-list-chart-id="${trendCard.id}"></div>
       </div>
     </li>
   `;
 
-  data.forEach(trendCard => {
-    trendsList.insertAdjacentHTML('beforeend', getTrendCard(trendCard));
+  const init = () => {
+    popularCryptocurrencies.forEach(trendCard => {
+      trendsList.insertAdjacentHTML('beforeend', getTrendCardTemplate(trendCard));
 
-    const chart = document.querySelector(`[data-chart-id="${trendCard.id}"]`);
+      const chart = document.querySelector(`[data-trends-list-chart-id="${trendCard.id}"]`);
 
-    new ApexCharts(chart, {
-      ...chartOptions,
-      series: [{
-        data: trendCard.data
-      }]
-    }).render();
-  });
+      new ApexCharts(chart, {
+        ...currentChartConfig,
+        series: [{
+          data: trendCard.data
+        }]
+      }).render();
+    });
+  };
+
+  init();
 })();
