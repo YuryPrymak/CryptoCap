@@ -1,0 +1,75 @@
+.steps-list {
+  &__step {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(200px);
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+
+    @include media-md {
+      justify-content: center;
+    }
+
+    @include media-sm {
+      flex-direction: column;
+    }
+  }
+
+  &__icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    @include media-sm {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: var(--text-color-4);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+
+    @include media-md {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 340px;
+    color: var(--text-color-2);
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+
+    @include media-md {
+      text-align: center;
+    }
+  }
+}
