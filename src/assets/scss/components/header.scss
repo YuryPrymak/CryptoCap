@@ -1,7 +1,7 @@
 .header {
-  .sticky-header {
-    z-index: 99;
+  z-index: 99;
 
+  .sticky-header {
     &::before {
       background-color: var(--main-bg-color);
       box-shadow: 0 0 7px 3px rgba(100, 100, 100, .3);

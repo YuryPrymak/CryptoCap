@@ -12,6 +12,8 @@
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
     margin-right: 20px;
     flex-grow: 1;
 
@@ -51,6 +53,7 @@
   &__logo {
     display: block;
     flex-shrink: 0;
+    margin-right: auto;
     margin-bottom: 40px;
     color: var(--text-color-main);
     font-size: var(--font-size-large);
@@ -58,6 +61,7 @@
     white-space: nowrap;
 
     @include media-md {
+      margin: 0 auto;
       margin-bottom: 20px;
     }
 

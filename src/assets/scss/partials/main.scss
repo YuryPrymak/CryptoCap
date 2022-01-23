@@ -147,7 +147,7 @@ svg {
 
 * {
   &:focus {
-    outline: #000 solid 1px;
-    outline-offset: -1px;
+    outline: var(--brand-color) solid 2px;
+    outline-offset: 1px;
   }
 }

@@ -3,6 +3,7 @@ export default (() => {
   const header = document.querySelector('[data-header]');
   const btnNavToggle = document.querySelector('[data-btn-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
+  const firstLink = nav.querySelector('a');
 
   let isOpen = false;
 
@@ -13,6 +14,8 @@ export default (() => {
 
     btnNavToggle.classList.add('is-active');
     nav.classList.add('active');
+
+    firstLink.focus();
 
     body.style.overflow = 'hidden';
   };
@@ -41,6 +44,10 @@ export default (() => {
     }
   };
 
+  const isClickLink = e => {
+    if(e.target.tagName === 'A') closeNav();
+  };
+
   const fixNav = () => {
     window.pageYOffset > 1
       ? header.classList.add('sticky-header')
@@ -48,6 +55,8 @@ export default (() => {
   };
 
   btnNavToggle.addEventListener('click', navToggle);
+  nav.addEventListener('click', isClickLink);
   body.addEventListener('click', isClickOutside);
+  window.addEventListener('load', fixNav);
   window.addEventListener('scroll', fixNav);
 })();
