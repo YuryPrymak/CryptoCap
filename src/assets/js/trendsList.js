@@ -26,7 +26,7 @@ export default (() => {
   currentChartConfig.colors = ['#0FAE96'];
 
   const getTrendCardTemplate = trendCard => `
-    <li class="card-list__card-default trend-card">
+    <li class="cards-list__card-default trend-card">
       <div class="trend-card__header">
         <div class="trend-card__icon">
           <img src="./assets/img/cryptocurrencies/${trendCard.icon}" alt="${trendCard.title}">

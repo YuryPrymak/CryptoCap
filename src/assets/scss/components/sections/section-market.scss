@@ -1,12 +1,13 @@
 .section-market {
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   &__label {
     margin-bottom: 20px;
     color: var(--text-color-2);
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     font-weight: 500;
     line-height: 160%;
 

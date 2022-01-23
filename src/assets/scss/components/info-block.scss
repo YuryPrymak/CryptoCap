@@ -4,7 +4,7 @@
   align-items: center;
   padding: 20px 60px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
 
   @include media-lg {
     padding: 20px;
@@ -28,7 +28,7 @@
 
   &__title {
     margin-bottom: 12px;
-    font-size: 24px;
+    font-size: var(--font-size-large);
     font-weight: 600;
     line-height: 32px;
 
@@ -39,8 +39,8 @@
 
   &__text {
     color: var(--text-color-2);
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-medium);
 
     @include media-sm {
       text-align: center;

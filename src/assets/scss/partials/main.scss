@@ -1,7 +1,8 @@
 // Partials
 @import './fonts';
-@import './variables';
 @import './media-queries';
+@import './mixins';
+@import './variables';
 
 *,
 *::before,
@@ -15,8 +16,8 @@ body {
   min-width: 320px;
   color: var(--text-color-main);
   background-color: var(--main-bg-color);
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
 }
 
 ul {
@@ -45,7 +46,7 @@ table {
   background-image: url('../img/bg-1.png'), url('../img/bg-2.png'), url('../img/bg-3.png');
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  background-position: top center, center center, bottom 10% center;
+  background-position: top center, center center, bottom center;
 
   &__header {
 
@@ -58,6 +59,12 @@ table {
 
   &__footer {
 
+  }
+}
+
+.main {
+  &__section {
+    margin-bottom: var(--section-vertical-gap);
   }
 }
 

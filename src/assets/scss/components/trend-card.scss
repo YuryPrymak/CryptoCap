@@ -1,16 +1,15 @@
 .trend-card {
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 18px;
-  background-color: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(200px);
+
+  @include background-blur;
 
   // Card Header
   &__header {
     display: flex;
     align-items: center;
     padding-bottom: 17px;
-    border-bottom: 1px solid rgba(255, 255, 255, .05);
+    border-bottom: 1px solid var(--border-color);
   }
 
   &__icon {
@@ -44,7 +43,7 @@
   &__title {
     margin-right: 15px;
     color: var(--text-color-4);
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     font-weight: 600;
     text-transform: uppercase;
 
@@ -106,16 +105,16 @@
   &__price {
     margin-right: 10px;
     color: var(--text-color-4);
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-large);
     font-weight: 500;
     white-space: nowrap;
   }
 
   &__percent {
     color: var(--text-color-2);
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-medium);
     font-weight: 500;
     white-space: nowrap;
   }

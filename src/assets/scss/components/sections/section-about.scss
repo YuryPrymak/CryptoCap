@@ -1,0 +1,37 @@
+.section-about {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: var(--text-color-2);
+    font-size: var(--font-size-medium);
+    font-family: var(--font-family-secondary);
+    line-height: 160%;
+    text-align: center;
+
+    @include media-md {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__articles {
+    margin-bottom: 30px;
+  }
+
+  &__link-see-all-articles {
+    margin-right: auto;
+
+    @include media-lg {
+      margin: 0 auto;
+    }
+  }
+}

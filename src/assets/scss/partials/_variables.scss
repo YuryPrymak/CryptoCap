@@ -8,11 +8,37 @@
   --text-color-3: #C6C6C6;
   --text-color-4: #ECF1F0;
   --text-color-5: #1D1429;
+  --border-color: rgba(255, 255, 255, 0.05);
 
-  // Sizes
+  // Layout
   --header-height: 90px;
   --page-max-width: 1260px;
   --side-padding: 40px;
   --side-padding-lg: 20px;
   --side-padding-sm: 10px;
+  --section-vertical-gap: 150px;
+
+  @include media-md {
+    --section-vertical-gap: 100px;
+  }
+
+  @include media-sm {
+    --section-vertical-gap: 75px;
+  }
+
+  // Fonts
+  --font-size-default: 16px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --font-size-ultra-large: 36px;
+
+  --font-family-default: 'Raleway', sans-serif;
+  --font-family-secondary: 'Roboto', sans-serif;
+
+  @include media-sm {
+    --font-size-default: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-ultra-large: 28px;
+  }
 }

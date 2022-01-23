@@ -1,5 +1,6 @@
 .coins-stats {
-  margin-bottom: 140px;
+  display: flex;
+  flex-direction: column;
 
   &__toolbar {
     display: flex;
@@ -56,5 +57,13 @@
     margin-bottom: 30px;
     color: var(--text-color-2);
     text-align: center;
+  }
+
+  &__link-all-coins {
+    margin-right: auto;
+
+    @include media-lg {
+      margin: 0 auto;
+    }
   }
 }

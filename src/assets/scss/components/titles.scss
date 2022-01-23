@@ -1,6 +1,6 @@
 .title-h1 {
   color: var(--text-color-4);
-  font-size: 36px;
+  font-size: var(--font-size-ultra-large);
   font-weight: 700;
   line-height: 44px;
   text-align: center;
@@ -8,12 +8,7 @@
 
 .title-h2 {
   color: var(--text-color-4);
-  font-size: 36px;
+  font-size: var(--font-size-ultra-large);
   font-weight: 700;
   line-height: 44px;
-  text-align: center;
-
-  &_left {
-    text-align: left;
-  }
 }

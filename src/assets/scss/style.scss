@@ -1,17 +1,20 @@
 // Default
 @import './partials/main.scss';
 
+// Sections
+@import './components/sections/section-trends.scss';
+@import './components/sections/section-features.scss';
+@import './components/sections/section-market.scss';
+@import './components/sections/section-get-started.scss';
+@import './components/sections/section-about.scss';
+
 // Components
 @import './components/header.scss';
 @import './components/nav.scss';
 @import './components/footer.scss';
+@import './components/titles.scss';
 @import './components/lang-list.scss';
-@import './components/section-trends.scss';
-@import './components/section-features.scss';
-@import './components/section-market.scss';
-@import './components/section-get-started.scss';
-@import './components/section-about.scss';
-@import './components/card-list.scss';
+@import './components/cards-list.scss';
 @import './components/trend-card.scss';
 @import './components/feature-card.scss';
 @import './components/info-block.scss';
@@ -20,13 +23,14 @@
 @import './components/articles-list.scss';
 @import './components/article-card.scss';
 @import './components/social-list.scss';
+@import './components/table-coins.scss';
+
+// UI
 @import './components/UI/btn-hamburger.scss';
 @import './components/UI/btn-default.scss';
 @import './components/UI/btn-secondary.scss';
 @import './components/UI/link-svg.scss';
 @import './components/UI/link-default.scss';
-@import './components/UI/titles.scss';
 @import './components/UI/dropdown.scss';
 @import './components/UI/search-box.scss';
 @import './components/UI/table-default.scss';
-@import './components/UI/table-coins.scss';

@@ -28,10 +28,10 @@
     height: 44px;
     padding: 0 10px 0 54px;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     background-color: rgba(255, 255, 255, 0.02);
     color: var(--text-color-2);
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-default);
   }
 }

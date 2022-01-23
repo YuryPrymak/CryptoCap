@@ -1,7 +1,6 @@
-.card-list {
+.cards-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin: -12px;
 
   @include media-sm {
