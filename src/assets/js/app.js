@@ -2,9 +2,9 @@
 import 'focus-visible';
 
 // Scripts
-import './nav.js';
-import './dropdown.js';
-import './trendsList.js';
-import './coinsStats.js';
-import './smooth-scroll.js';
-import './preloader.js';
+import './scripts/nav.js';
+import './scripts/dropdown.js';
+import './scripts/trendsList.js';
+import './scripts/coinsStats.js';
+import './scripts/smooth-scroll.js';
+import './scripts/preloader.js';

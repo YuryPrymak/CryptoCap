@@ -3,35 +3,7 @@
 @import './media-queries';
 @import './mixins';
 @import './variables';
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// Scrollbar
-* {
-  &::-webkit-scrollbar {
-    width: 12px;
-    height: 10px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: var(--text-color-5);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: var(--brand-color);
-
-    &:hover {
-      background-color: var(--brand-color-hover);
-    }
-  }
-}
+@import './reset';
 
 body {
   min-width: 320px;
@@ -39,23 +11,6 @@ body {
   background-color: var(--main-bg-color);
   font-family: var(--font-family-default);
   font-size: var(--font-size-default);
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
-
-table {
-  width: 100%;
 }
 
 // Layout
@@ -117,18 +72,6 @@ table {
   opacity: 0;
   pointer-events: none;
   transform: translateY(calc((var(--header-height) + 20px) * -1));
-}
-
-// Font
-input, textarea, button, select {
-  font-family: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  font-weight: normal;
 }
 
 // Transition

@@ -1,7 +1,7 @@
 import ApexCharts from 'apexcharts';
 
-import chartConfig from './chart/chartConfig.js';
-import { cryptocurrencyCategories, cryptocurrencyData } from './data/cryptocurrency.js';
+import chartConfig from '../chart/chartConfig.js';
+import { cryptocurrencyCategories, cryptocurrencyData } from '../data/cryptocurrency.js';
 
 export default (() => {
   const statsCategoriesWrapper = document.querySelector('[data-coins-stats-categories]');
