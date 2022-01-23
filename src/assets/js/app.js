@@ -7,3 +7,4 @@ import './dropdown.js';
 import './trendsList.js';
 import './coinsStats.js';
 import './smooth-scroll.js';
+import './preloader.js';
