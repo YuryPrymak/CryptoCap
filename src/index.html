@@ -98,7 +98,7 @@
           <ul class="cards-list">
             <li class="cards-list__card-default feature-card">
               <div class="feature-card__icon">
-                <img src="./assets/img/features/briefcase.svg" alt="">
+                <img src="./assets/img/features/briefcase.svg" alt="Briefcase">
               </div>
               <h3 class="feature-card__title">Manage Portfolio</h3>
               <p class="feature-card__text">
@@ -113,7 +113,7 @@
             </li>
             <li class="cards-list__card-default feature-card">
               <div class="feature-card__icon">
-                <img src="./assets/img/features/shield.svg" alt="">
+                <img src="./assets/img/features/shield.svg" alt="Shield">
               </div>
               <h3 class="feature-card__title">Protected Securely</h3>
               <p class="feature-card__text">
@@ -128,7 +128,7 @@
             </li>
             <li class="cards-list__card-default feature-card">
               <div class="feature-card__icon">
-                <img src="./assets/img/features/bitcoin.svg" alt="">
+                <img src="./assets/img/features/bitcoin.svg" alt="Bitcoin">
               </div>
               <h3 class="feature-card__title">Cryptocurrency Variety</h3>
               <p class="feature-card__text">
@@ -143,7 +143,7 @@
             </li>
             <li class="cards-list__card-default feature-card">
               <div class="feature-card__icon">
-                <img src="./assets/img/features/book.svg" alt="">
+                <img src="./assets/img/features/book.svg" alt="Book">
               </div>
               <h3 class="feature-card__title">Learn Best Practice</h3>
               <p class="feature-card__text">
@@ -181,7 +181,7 @@
                   <path d="M16.041 15.856c-0.034 0.026-0.067 0.055-0.099 0.087s-0.060 0.064-0.087 0.099c-1.258 1.213-2.969 1.958-4.855 1.958-1.933 0-3.682-0.782-4.95-2.050s-2.050-3.017-2.050-4.95 0.782-3.682 2.050-4.95 3.017-2.050 4.95-2.050 3.682 0.782 4.95 2.050 2.050 3.017 2.050 4.95c0 1.886-0.745 3.597-1.959 4.856zM21.707 20.293l-3.675-3.675c1.231-1.54 1.968-3.493 1.968-5.618 0-2.485-1.008-4.736-2.636-6.364s-3.879-2.636-6.364-2.636-4.736 1.008-6.364 2.636-2.636 3.879-2.636 6.364 1.008 4.736 2.636 6.364 3.879 2.636 6.364 2.636c2.125 0 4.078-0.737 5.618-1.968l3.675 3.675c0.391 0.391 1.024 0.391 1.414 0s0.391-1.024 0-1.414z"></path>
                 </svg>
               </button>
-              <input type="text" name="Search" class="search-box__input" data-coins-stats-search>
+              <input type="text" name="Search" class="search-box__input" aria-label="Search cryptocurrency" data-coins-stats-search>
             </div>
           </div>
           <div class="coins-stats__table table-default table-coins">
@@ -203,7 +203,7 @@
           <a href="#" class="coins-stats__link-all-coins link-default">See All Coins</a>
         </div>
       </section>
-      <section class="main__section section-get-started" id="">
+      <section class="main__section section-get-started">
         <div class="page-anchor" id="get-started"></div>
         <div class="section-get-started__info">
           <h2 class="section-get-started__title title-h2">How To Get Started</h2>
@@ -250,7 +250,11 @@
           <ul class="articles-list">
             <li class="articles-list__article articles-list__article_large article-card article-card_large">
               <div class="article-card__img">
-                <img src="./assets/img/articles/1.jpg" alt="Money">
+                <picture>
+                  <source srcset="./assets/img/articles/1.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/1.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/1.png" alt="Money">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">CRYPTO BASIC</p>
@@ -259,7 +263,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/2.png" alt="Money">
+                <picture>
+                  <source srcset="./assets/img/articles/2.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/2.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/2.png" alt="Bitcoin coin">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">CRYPTO BASIC</p>
@@ -271,7 +279,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/3.png" alt="Bank">
+                <picture>
+                  <source srcset="./assets/img/articles/3.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/3.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/3.png" alt="Bank">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">CRYPTO BASIC</p>
@@ -283,7 +295,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/4.png" alt="Wallet">
+                <picture>
+                  <source srcset="./assets/img/articles/4.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/4.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/4.png" alt="Wallet">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">TIPS & TRICKS</p>
@@ -295,7 +311,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/5.png" alt="Bitcoin coin">
+                <picture>
+                  <source srcset="./assets/img/articles/5.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/5.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/5.png" alt="Bitcoin coin">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">CRYPTO BASIC</p>
@@ -307,7 +327,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/6.png" alt="Trading mobile app">
+                <picture>
+                  <source srcset="./assets/img/articles/6.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/6.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/6.png" alt="Trading app">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">TIPS & TRICKS</p>
@@ -319,7 +343,11 @@
             </li>
             <li class="articles-list__article article-card">
               <div class="article-card__img">
-                <img src="./assets/img/articles/7.png" alt="Money">
+                <picture>
+                  <source srcset="./assets/img/articles/7.avif" type="image/avif">
+                  <source srcset="./assets/img/articles/7.webp" type="image/webp">
+                  <img loading="lazy" src="./assets/img/articles/7.png" alt="Money">
+                </picture>
               </div>
               <div class="article-card__info">
                 <p class="article-card__tag">TIPS & TRICKS</p>
