@@ -46,6 +46,13 @@
         animation: loader-spin 1.5s linear infinite;
       }
     }
+
+    [data-theme="light"] &__loader {
+      &::before {
+        border: 10px solid rgba(15, 174, 150, 0.15);
+        border-top: 10px solid var(--brand-color);
+      }
+    }
   }
 
   .preloader-hide {

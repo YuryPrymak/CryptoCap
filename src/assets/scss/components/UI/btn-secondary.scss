@@ -22,3 +22,14 @@
     }
   }
 }
+
+[data-theme="light"] .btn-secondary {
+  &:hover {
+    color: var(--brand-color);
+  }
+
+  &_active {
+    color: #fff;
+    background-color: var(--text-color-4);
+  }
+}

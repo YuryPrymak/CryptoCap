@@ -42,3 +42,14 @@
     --font-size-ultra-large: 28px;
   }
 }
+
+[data-theme="light"] {
+  // Colors
+  --main-bg-color: #fff;
+  --text-color-main: #0D3E36;
+  --text-color-2: #4D625F;
+  --text-color-3: #4D625F;
+  --text-color-4: #0D3E36;
+  --text-color-5: #1D1429;
+  --border-color: #EAEAEA;
+}

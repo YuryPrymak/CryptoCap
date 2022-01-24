@@ -52,6 +52,11 @@
     white-space: nowrap;
   }
 
+  [data-theme="light"] &__tag {
+    background-color: rgba(15, 174, 150, 0.15);
+    color: var(--brand-color);
+  }
+
   &__title {
     margin-bottom: 12px;
     color: var(--text-color-main);
@@ -118,6 +123,21 @@
       margin-bottom: 0;
       padding: 4px 8px;
       font-size: 14px;
+    }
+  }
+
+  [data-theme="light"] &_large {
+    .article-card__title {
+      color: #fff;
+
+      &:hover {
+        color: var(--brand-color-hover);
+      }
+    }
+
+    .article-card__tag {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #B6B6B6;
     }
   }
 }

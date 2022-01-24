@@ -17,6 +17,10 @@
     &:not(:last-child) {
       margin-right: 20px;
 
+      @include media-xl {
+        margin-right: 10px;
+      }
+
       @include media-lg {
         margin-right: 0;
         margin-bottom: 20px;
@@ -27,9 +31,14 @@
   &__link {
     padding: 10px;
     color: var(--text-color-main);
+    white-space: nowrap;
 
     &:hover {
       color: var(--brand-color);
     }
+  }
+
+  [data-theme="light"] &__link {
+    font-weight: 600;
   }
 }

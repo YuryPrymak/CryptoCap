@@ -29,6 +29,7 @@
     "space-before-function-paren": "off",
     "no-unused-expressions": "off",
     "no-useless-constructor": "off",
-    "import/extensions": 0
+    "import/extensions": 0,
+    "no-else-return": "off"
   }
 }

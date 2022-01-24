@@ -96,6 +96,15 @@
     }
   }
 
+  &__btn-theme-toggle {
+    flex-shrink: 0;
+    margin-left: 20px;
+
+    @include media-xs {
+      margin-left: 15px;
+    }
+  }
+
   &__btn-login {
     margin-left: 20px;
 

@@ -52,4 +52,8 @@
       background-color: var(--brand-color-hover);
     }
   }
+
+  [data-theme="light"] &__link {
+    color: #fff;
+  }
 }

@@ -66,6 +66,10 @@
     font-weight: 600;
   }
 
+  [data-theme="light"] &__label {
+    background-color: rgba(198, 198, 198, 0.45)
+  }
+
   &__link {
     width: 35px;
     height: 35px;
