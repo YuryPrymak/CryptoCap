@@ -80,6 +80,12 @@
     }
   }
 
+  [data-theme="light"] &__nav {
+    @include media-lg {
+      @include background-blur-type-2-light;
+    }
+  }
+
   .active {
     @include media-lg {
       visibility: visible;

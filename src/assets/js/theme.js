@@ -37,8 +37,21 @@ export default (() => {
     btnThemeToggle.addEventListener('click', toggleTheme);
   });
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({ matches: isDark }) => {
-    theme.value = isDark ? 'dark' : 'light';
-    setPreference();
-  });
+  const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  try {
+    darkMediaQuery.addEventListener('change', ({ matches: isDark }) => {
+      theme.value = isDark ? 'dark' : 'light';
+      setPreference();
+    });
+  } catch (error) {
+    try {
+      darkMediaQuery.addListener(({ matches: isDark }) => {
+        theme.value = isDark ? 'dark' : 'light';
+        setPreference();
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }
 })();
